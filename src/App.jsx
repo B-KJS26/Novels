@@ -3,6 +3,7 @@ import './App.css';
 import Header from './pages/Header/Header';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Main from '../src/pages/Main';
+import Firstnovel from './pages/First/firstnovel';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Main />}></Route>
+          <Route path="/firstnovel" element={<Firstnovel />}></Route>
         </Routes>
       </Router>
     </div>

@@ -1,11 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import Jeong from '../images/jeong.png';
 export default function Main() {
+    const nav = useNavigate();
+    function gofirst() {
+        nav('/firstnovel');
+    }
     return(
         <Mainpage>
             <Title>현재 인기 있는 소설</Title>
-            <Firstnovel>
+            <Firstnovel onClick={gofirst}>
             </Firstnovel>
         </Mainpage>
     )
