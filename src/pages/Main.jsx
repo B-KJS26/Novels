@@ -1,4 +1,5 @@
 import React from 'react';
+import FadeIn from 'react-fade-in/lib/FadeIn';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import Jeong from '../images/jeong.png';
@@ -7,17 +8,20 @@ export default function Main() {
     function gofirst() {
         nav('/firstnovel');
     }
-    return(
+    return (
         <Mainpage>
-            <Title>현재 인기 있는 소설</Title>
-            <Firstnovel onClick={gofirst}>
-            </Firstnovel>
+            <FadeIn>
+                <Title>현재 인기 있는 소설</Title>
+                <Firstnovel onClick={gofirst}>
+                </Firstnovel>
+            </FadeIn>
         </Mainpage>
     )
 }
 const Mainpage = styled.div`
     width: 100vw;
     height: 90vh;
+    
 `
 const Title = styled.h1`
     position: absolute;
@@ -32,7 +36,8 @@ const Firstnovel = styled.div`
     margin-left: 10vw;
     margin-top: 22vh;
     background-image: url(${Jeong});
-    background-size: cover;
+    background-size: 15vw 55vh;
+    background-repeat: no-repeat;
     text-align: center;
     justify-content: center;
     &:hover {

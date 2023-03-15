@@ -8,8 +8,8 @@ import Firstnovel from './pages/First/firstnovel';
 function App() {
   return (
     <div>
-      <Header />
       <Router>
+      <Header />
         <Routes>
           <Route path="/" element={<Main />}></Route>
           <Route path="/firstnovel" element={<Firstnovel />}></Route>

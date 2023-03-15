@@ -2,24 +2,25 @@ import React from 'react';
 import styled from 'styled-components';
 import FadeIn from 'react-fade-in/lib/FadeIn';
 import { BiChevronLeft, BiChevronRight } from 'react-icons/bi';
+import Noveljson from '../../files/novel.json';
 
 export default function Firstnovel() {
-    const Titlearray =[ 
-        '-프롤로그-',
+    const Titlearray = [
+        '- 프롤로그 -',
         'zi존월드?',
         '의문의 그녀',
         '위험해진 정근우?',
         '초초초초미소녀의 정체?!',
         '초초초초 미소녀의 정체는??! 삐슝?!'
     ]
-    const [pagenum, setPagenum] = React.useState(1);
+    const [pagenum, setPagenum] = React.useState(1)
     function previous() {
-        if(pagenum > 1) {
+        if (pagenum > 1) {
             setPagenum(pagenum - 1);
         }
     }
     function next() {
-        if(pagenum < 6){
+        if (pagenum < 6) {
             setPagenum(pagenum + 1);
         }
     }
@@ -36,15 +37,24 @@ export default function Firstnovel() {
                     <Num>{pagenum}</Num>
                 </Select>
                 <Novel>
-                    <Novtitle>{Titlearray[pagenum-1]}</Novtitle>
+                    <Novtitle>{Titlearray[pagenum - 1]}</Novtitle>
+                    <Novmain>{Object.keys(Noveljson.novel[pagenum-1])[0]}</Novmain>
                 </Novel>
             </NovelMain>
         </FadeIn>
     );
 }
 
+const Novmain = styled.p`
+    position: absolute;
+    margin-left: 20vw;
+    white-space: pre-line;
+    line-height: 5vh;
+    font-family: kimbold;
+`
 const Novtitle = styled.h1`
-    font-size: 3rem;
+    font-size: 2.5rem;
+    margin-left: 20vw;
 `
 const LeftArrow = styled.span`
 position: absolute;
@@ -63,10 +73,11 @@ cursor:pointer;
 
 const Novel = styled.div`
     position: absolute;
-    width: 60vw;
+    width: 100vw;
     height: 130vh;
     margin-top: 10vh;
-    background-color: gray;
+    justify-content: center;
+    text-align: left;
 `
 
 
@@ -87,7 +98,7 @@ const Select = styled.div`
 const NovelMain = styled.div`
     display: flex;
     width: 100vw;
-    height: 160vh;
+    height: 200vh;
     background-color: white;
     text-align:center;
     justify-content: center;

@@ -1,9 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 export default function Header() {
-    return(
+    const nav = useNavigate();
+    function Main() {
+        nav('/');
+    }
+    return (
         <Headers>
-            <Title>사이트 이름 추천 받습니다.</Title>
+            <Title onClick={Main}>사이트 이름 추천 받습니다.</Title>
         </Headers>
     )
 }
@@ -18,4 +23,5 @@ const Headers = styled.div`
 const Title = styled.h1`
     position: absolute;
     margin-left: 1.5vw;
+    cursor: pointer;
 `
