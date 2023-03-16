@@ -23,7 +23,7 @@ export default function Firstnovel() {
         }
     }
     function next() {
-        if (pagenum < 6) {
+        if (pagenum < Titlearray.length) {
             setPagenum(pagenum + 1);
             window.scrollTo({top: 0, behavior: 'smooth'});
         }
