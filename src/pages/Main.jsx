@@ -8,16 +8,29 @@ export default function Main() {
     function gofirst() {
         nav('/firstnovel');
     }
+    function gosecond() {
+        nav('/secondnovel');
+    }
     return (
         <Mainpage>
             <FadeIn>
                 <Title>현재 인기 있는 소설</Title>
                 <Firstnovel onClick={gofirst}>
+                    <Text>작가 : 아잉아잉</Text>
                 </Firstnovel>
+                <Secondnovel onClick={gosecond}>
+                    <Text>작가 : 앗핫맛</Text>
+                </Secondnovel>
             </FadeIn>
         </Mainpage>
     )
 }
+
+const Text = styled.p`
+    margin-top: 60vh;
+    font-size: 20px;
+    font-family: kimbold;
+`
 const Mainpage = styled.div`
     width: 100vw;
     height: 120vh;
@@ -50,10 +63,18 @@ const Firstnovel = styled.div`
 const Secondnovel = styled.div`
     position: absolute;
     background-color: gray;
-    width: 14vw;
-    height: 46vh;
-    margin-left: 26vw;
+    width: 15vw;
+    height: 55vh;
+    margin-left: 30vw;
     margin-top: 22vh;
+    background-repeat: no-repeat;
+    text-align: center;
+    justify-content: center;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: all ease .5s;
+    }
 `
 const Thirdnovel = styled.div`
     position: absolute;
