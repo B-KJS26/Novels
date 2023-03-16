@@ -3,6 +3,7 @@ import FadeIn from 'react-fade-in/lib/FadeIn';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import Jeong from '../images/jeong.png';
+import Jo from '../images/jo.png';
 export default function Main() {
     const nav = useNavigate();
     function gofirst() {
@@ -44,7 +45,6 @@ const Title = styled.h1`
 `
 const Firstnovel = styled.div`
     position: absolute;
-    background-color: gray;
     width: 15vw;
     height: 55vh;
     margin-left: 10vw;
@@ -62,11 +62,12 @@ const Firstnovel = styled.div`
 `
 const Secondnovel = styled.div`
     position: absolute;
-    background-color: gray;
     width: 15vw;
     height: 55vh;
     margin-left: 30vw;
     margin-top: 22vh;
+    background-image: url(${Jo});
+    background-size: 15vw 55vh;
     background-repeat: no-repeat;
     text-align: center;
     justify-content: center;
