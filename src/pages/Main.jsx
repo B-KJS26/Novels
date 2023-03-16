@@ -8,9 +8,11 @@ export default function Main() {
     const nav = useNavigate();
     function gofirst() {
         nav('/firstnovel');
+        window.scrollTo({top: 0, behavior: 'smooth' })
     }
     function gosecond() {
-        nav('/secondnovel');
+        alert('아직 출시되지 않았습니다!')
+        window.scrollTo({top: 0, behavior: 'smooth' })
     }
     return (
         <Mainpage>
