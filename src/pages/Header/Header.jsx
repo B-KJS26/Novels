@@ -8,7 +8,7 @@ export default function Header() {
     }
     return (
         <Headers>
-            <Title onClick={Main}>사이트 이름 추천 받습니다.</Title>
+            <Title onClick={Main}>오버 노베르</Title>
         </Headers>
     )
 }
