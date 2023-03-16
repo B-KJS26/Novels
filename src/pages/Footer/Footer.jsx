@@ -48,9 +48,10 @@ const Lines = styled.div`
     background-color: black;
 `
 const Footermain = styled.div`
-    width: 100vw;
-    height: 50vh;
-    background-color: white;
-    text-align: left;
-    justify-content: center;
+    bottom: 0px;
+    width: 100%;
+    height: 600px;
+    color: black;
+    text-align: left;   
+    margin-top: 10vh;
 `

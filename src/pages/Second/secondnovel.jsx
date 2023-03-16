@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import FadeIn from 'react-fade-in/lib/FadeIn';
 import { BiChevronLeft, BiChevronRight } from 'react-icons/bi';
 import Noveljson2 from '../../files/novel.json';
+import Footer from '../Footer/Footer';
 
 export default function SecondNovel() {
     const Titlearray = [

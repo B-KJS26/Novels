@@ -35,7 +35,6 @@ const Text = styled.p`
 const Mainpage = styled.div`
     width: 100vw;
     height: 120vh;
-    
 `
 const Title = styled.h1`
     position: absolute;

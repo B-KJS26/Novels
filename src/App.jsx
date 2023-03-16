@@ -6,20 +6,21 @@ import Main from '../src/pages/Main';
 import Firstnovel from './pages/First/firstnovel';
 import Footer from './pages/Footer/Footer';
 import SecondNovel from './pages/Second/secondnovel';
-
+import styled from 'styled-components';
 function App() {
   return (
-    <div>
+    <div className='App'>
       <Router>
-      <Header />
+      <Header/>
         <Routes>
           <Route path="/" element={<Main />}></Route>
           <Route path="/firstnovel" element={<Firstnovel />}></Route>
           <Route path="/secondnovel" element={<SecondNovel />}></Route>
         </Routes>
-      <Footer />
+        
+      <Footer></Footer>
       </Router>
-    </div>
+      </div>
   );
 }
 

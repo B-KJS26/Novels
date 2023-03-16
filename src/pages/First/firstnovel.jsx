@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import FadeIn from 'react-fade-in/lib/FadeIn';
 import { BiChevronLeft, BiChevronRight } from 'react-icons/bi';
 import Noveljson from '../../files/novel.json';
+import Footer from '../Footer/Footer';
 
 export default function Firstnovel() {
     const Titlearray = [
@@ -11,7 +12,8 @@ export default function Firstnovel() {
         '의문의 그녀',
         '위험해진 정근우?',
         '초초초초미소녀의 정체?!',
-        '초초초초 미소녀의 정체는??! 삐슝?!'
+        '초초초초 미소녀의 정체는??! 삐슝?!',
+        '정근우, 야근제 아카데미에 입학하다.'
     ]
     const [pagenum, setPagenum] = React.useState(1)
     function previous() {
@@ -77,7 +79,7 @@ const Novtitle = styled.h1`
     margin-left: 20vw;
     font-family: kimbold;
 `
-const LeftArrow = styled.span`
+const LeftArrow = styled.div`
 position: absolute;
 margin-top: 1.7vh;
 margin-left: -7vw;
@@ -85,7 +87,7 @@ color: black;
 cursor:pointer;
 `
 
-const RightArrow = styled.span`
+const RightArrow = styled.div`
 margin-top: 1.7vh;
 margin-left: 7vw;
 color: black;
@@ -94,7 +96,6 @@ cursor:pointer;
 
 const Novel = styled.div`
     width: 100vw;
-    height: 130vh;
     margin-top: 10vh;
     justify-content: center;
     text-align: left;
@@ -119,8 +120,6 @@ const Select = styled.div`
 const NovelMain = styled.div`
     display: flex;
     width: 100vw;
-    height: 200vh;
-    background-color: white;
-    text-align:center;
+    text-align: center;
     justify-content: center;
 `
