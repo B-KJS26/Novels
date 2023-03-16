@@ -20,13 +20,14 @@ export default function Main() {
 }
 const Mainpage = styled.div`
     width: 100vw;
-    height: 90vh;
+    height: 120vh;
     
 `
 const Title = styled.h1`
     position: absolute;
     margin-left: 10vw;
     margin-top: 10vh;
+    font-family: heiroregular;
 `
 const Firstnovel = styled.div`
     position: absolute;

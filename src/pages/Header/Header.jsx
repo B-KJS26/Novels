@@ -24,4 +24,6 @@ const Title = styled.h1`
     position: absolute;
     margin-left: 1.5vw;
     cursor: pointer;
+    font-family: heirobold;
+    text-shadow: 5px 5px 10px gray;
 `

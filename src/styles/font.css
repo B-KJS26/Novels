@@ -4,9 +4,17 @@
 }
 @font-face {
     font-family: kimlight;
-    src: url(../fonts/KimjungchulMyungjo-Bold.ttf);
+    src: url(../fonts/KimjungchulMyungjo-Light.ttf);
 }
 @font-face {
     font-family: kimregular;
-    src: url(../fonts/KimjungchulMyungjo-Bold.ttf);
+    src: url(../fonts/KimjungchulMyungjo-Regular.ttf);
+}
+@font-face {
+    font-family: heirobold;
+    src: url(../fonts/HeirofLightBold.ttf);
+}
+@font-face {
+    font-family: heiroregular;
+    src: url(../fonts/HeirofLightRegular.ttf);
 }

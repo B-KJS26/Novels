@@ -4,6 +4,7 @@ import Header from './pages/Header/Header';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Main from '../src/pages/Main';
 import Firstnovel from './pages/First/firstnovel';
+import Footer from './pages/Footer/Footer';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Main />}></Route>
           <Route path="/firstnovel" element={<Firstnovel />}></Route>
         </Routes>
+      <Footer />
       </Router>
     </div>
   );

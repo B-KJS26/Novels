@@ -17,11 +17,13 @@ export default function Firstnovel() {
     function previous() {
         if (pagenum > 1) {
             setPagenum(pagenum - 1);
+            window.scrollTo({top: 0, behavior: 'smooth'});
         }
     }
     function next() {
         if (pagenum < 6) {
             setPagenum(pagenum + 1);
+            window.scrollTo({top: 0, behavior: 'smooth'});
         }
     }
     return (
@@ -39,22 +41,41 @@ export default function Firstnovel() {
                 <Novel>
                     <Novtitle>{Titlearray[pagenum - 1]}</Novtitle>
                     <Novmain>{Object.keys(Noveljson.novel[pagenum-1])[0]}</Novmain>
+                    <Selectunder>
+                    <LeftArrow onClick={previous}>
+                        <BiChevronLeft size={60}></BiChevronLeft>
+                    </LeftArrow>
+                    <RightArrow onClick={next}>
+                        <BiChevronRight size={60}></BiChevronRight>
+                    </RightArrow>
+                    <Num>{pagenum}</Num>
+                </Selectunder>
                 </Novel>
-            </NovelMain>
+            </NovelMain> 
         </FadeIn>
     );
 }
 
+const Selectunder = styled.div`
+    display: flex;
+    width: 30vw;
+    height: 10vh;
+    text-align:center;
+    justify-content: center;
+    margin-top: 15vh;
+    margin-left: 34vw;
+    z-index: 2;
+`
 const Novmain = styled.p`
-    position: absolute;
     margin-left: 20vw;
     white-space: pre-line;
     line-height: 5vh;
-    font-family: kimbold;
+    font-family: kimregular;
 `
 const Novtitle = styled.h1`
     font-size: 2.5rem;
     margin-left: 20vw;
+    font-family: kimbold;
 `
 const LeftArrow = styled.span`
 position: absolute;
@@ -72,7 +93,6 @@ cursor:pointer;
 `
 
 const Novel = styled.div`
-    position: absolute;
     width: 100vw;
     height: 130vh;
     margin-top: 10vh;
@@ -87,6 +107,7 @@ const Num = styled.h1`
 `
 
 const Select = styled.div`
+    position: absolute; 
     display: flex;
     width: 30vw;
     height: 10vh;
