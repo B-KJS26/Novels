@@ -7,7 +7,7 @@ import Jo from '../images/jo.png';
 export default function Main() {
     const nav = useNavigate();
     function gofirst() {
-        nav('/firstnovel');
+        nav('/firstintro');
         window.scrollTo({top: 0, behavior: 'smooth' })
     }
     function gosecond() {
