@@ -7,6 +7,7 @@ export default function Firstintro() {
     let nav = useNavigate();
     function gonovel() {
         nav('/firstnovel');
+        window.scrollTo({top: 0, behavior: 'smooth'});
     }
     function gofirstcharacter() {
         nav('/fncharacter');
