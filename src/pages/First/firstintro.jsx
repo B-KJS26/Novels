@@ -7,7 +7,7 @@ export default function Firstintro() {
     let nav = useNavigate();
     function gonovel() {
         nav('/firstnovel');
-        window.scrollTo({top: 0, behavior: 'smooth'});
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
     function gofirstcharacter() {
         nav('/fncharacter');
@@ -19,32 +19,32 @@ export default function Firstintro() {
                 <FadeIn
                     delay={300}
                 >
-                <Title>정현우, 이세계에서 브라자가문의 장자로 환생하다.</Title>
-                <Subtitle>작가 : 아잉아잉</Subtitle>
-                <Line></Line>
-                <Overview>
-                    <Outline>
-                        '병신국', '븅신국', '빙신국'의 삼국체제를 유지하고 있는 '지존월드'에서 벌어지는 정현우의 기묘한 모험 이야기
-                    </Outline>
-                </Overview>
-                <Viewbutton onClick={gonovel}>
-                    <Text>지금 보러가기</Text>
-                </Viewbutton>
-                <Introduction onClick={gofirstcharacter}>등장인물들이 궁금하다면?</Introduction>
+                    <Title>정현우, 이세계에서 브라자가문의 장자로 환생하다.</Title>
+                    <Subtitle>작가 : 아잉아잉</Subtitle>
+                    <Line></Line>
+                    <Overview>
+                        <Outline>
+                            '병신국', '븅신국', '빙신국'의 삼국체제를 유지하고 있는 '지존월드'에서 벌어지는 정현우의 기묘한 모험 이야기
+                        </Outline>
+                    </Overview>
+                    <Viewbutton onClick={gonovel}>
+                        <Text>지금 보러가기</Text>
+                    </Viewbutton>
+                    <Viewcharacter>
+                        <Introduction onClick={gofirstcharacter}>등장인물들이 궁금하다면?</Introduction>
+                    </Viewcharacter>
                 </FadeIn>
             </Intro>
         </FadeIn>
     );
 }
 const Introduction = styled.h1`
-    position: absolute;
-    margin-left: 55vw;
-    margin-top: 72vh;
     font-family: heiroregular;
     color: black;
     font-size: 1.7rem;
+    z-index: 2;
     cursor: pointer;
-    &::after {position: absolute; content:""; display: block; border-bottom: 3px solid #000; transition: .6s; left: 50%; width: 0; top: 120%;}
+    &::after {position: absolute; content:""; display: block; border-bottom: 3px solid #000; transition: .6s; left: 50%; width: 0;}
     &:hover::after {width: 110%; left: -4%; right: auto;}
     &:hover {
         transform: scale(1.1);
@@ -56,11 +56,24 @@ const Text = styled.h1`
     color: black;
     font-size: 1.7rem;
 `
+const Viewcharacter = styled.div`
+position: absolute;
+width: 18vw;
+height: 80px;
+margin-left: 55vw;
+margin-top: 70vh;
+text-align:center;
+justify-content: center;
+:hover {
+    transform: scale(1.1);
+    transition: all ease .5s;
+}
+`
 const Viewbutton = styled.div`
     position: absolute;
     display: relative;
     width: 18vw;
-    height: 8vh;
+    height: 80px;
     background-color: white;
     border: 3px solid;
     border-color: black;
@@ -69,7 +82,7 @@ const Viewbutton = styled.div`
     border-radius: 3rem;
     text-align:center;
     justify-content: center;
-    &: hover {
+    :hover {
         transform: scale(1.1);
         transition: all ease .5s;
     }

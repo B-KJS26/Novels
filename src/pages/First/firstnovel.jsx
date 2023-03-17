@@ -9,23 +9,19 @@ export default function Firstnovel() {
     const Titlearray = [
         '- 프롤로그 -',
         'zi존월드?',
-        '의문의 그녀',
-        '위험해진 정근우?',
-        '초초초초미소녀의 정체?!',
-        '초초초초 미소녀의 정체는??! 삐슝?!',
-        '정근우, 야근제 아카데미에 입학하다.'
+        '의문의 남자'
     ]
     const [pagenum, setPagenum] = React.useState(1)
     function previous() {
         if (pagenum > 1) {
             setPagenum(pagenum - 1);
-            window.scrollTo({top: 0, behavior: 'smooth'});
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     }
     function next() {
         if (pagenum < Titlearray.length) {
             setPagenum(pagenum + 1);
-            window.scrollTo({top: 0, behavior: 'smooth'});
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     }
     return (
@@ -42,18 +38,18 @@ export default function Firstnovel() {
                 </Select>
                 <Novel>
                     <Novtitle>{Titlearray[pagenum - 1]}</Novtitle>
-                    <Novmain>{Object.keys(Noveljson.novel[pagenum-1])[0]}</Novmain>
+                    <Novmain>{Object.keys(Noveljson.novel[pagenum - 1])[0]}</Novmain>
                     <Selectunder>
-                    <LeftArrow onClick={previous}>
-                        <BiChevronLeft size={60}></BiChevronLeft>
-                    </LeftArrow>
-                    <RightArrow onClick={next}>
-                        <BiChevronRight size={60}></BiChevronRight>
-                    </RightArrow>
-                    <Num>{pagenum}</Num>
-                </Selectunder>
+                        <LeftArrow onClick={previous}>
+                            <BiChevronLeft size={60}></BiChevronLeft>
+                        </LeftArrow>
+                        <RightArrow onClick={next}>
+                            <BiChevronRight size={60}></BiChevronRight>
+                        </RightArrow>
+                        <Num>{pagenum}</Num>
+                    </Selectunder>
                 </Novel>
-            </NovelMain> 
+            </NovelMain>
         </FadeIn>
     );
 }
