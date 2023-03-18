@@ -11,6 +11,7 @@ export default function Firstintro() {
     }
     function gofirstcharacter() {
         nav('/fncharacter');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
     return (
         <FadeIn delay={100}>
@@ -84,6 +85,7 @@ const Viewbutton = styled.div`
     justify-content: center;
     :hover {
         transform: scale(1.1);
+        cursor: pointer;
         transition: all ease .5s;
     }
 `

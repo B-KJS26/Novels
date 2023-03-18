@@ -8,11 +8,11 @@ export default function Main() {
     const nav = useNavigate();
     function gofirst() {
         nav('/firstintro');
-        window.scrollTo({top: 0, behavior: 'smooth' })
+        window.scrollTo({ top: 0, behavior: 'smooth' })
     }
     function gosecond() {
         alert('아직 출시되지 않았습니다!')
-        window.scrollTo({top: 0, behavior: 'smooth' })
+        window.scrollTo({ top: 0, behavior: 'smooth' })
     }
     return (
         <Mainpage>
